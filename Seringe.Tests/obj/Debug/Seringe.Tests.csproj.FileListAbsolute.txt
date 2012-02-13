@@ -1,0 +1,7 @@
+C:\Users\Juliën Hanssens\Desktop\_MAANDAG\ConsoleApplication1\Seringe.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Juliën Hanssens\Desktop\_MAANDAG\ConsoleApplication1\Seringe.Tests\bin\Debug\Seringe.Tests.dll
+C:\Users\Juliën Hanssens\Desktop\_MAANDAG\ConsoleApplication1\Seringe.Tests\bin\Debug\Seringe.Tests.pdb
+C:\Users\Juliën Hanssens\Desktop\_MAANDAG\ConsoleApplication1\Seringe.Tests\bin\Debug\Seringe.dll
+C:\Users\Juliën Hanssens\Desktop\_MAANDAG\ConsoleApplication1\Seringe.Tests\bin\Debug\Seringe.pdb
+C:\Users\Juliën Hanssens\Desktop\_MAANDAG\ConsoleApplication1\Seringe.Tests\obj\Debug\Seringe.Tests.dll
+C:\Users\Juliën Hanssens\Desktop\_MAANDAG\ConsoleApplication1\Seringe.Tests\obj\Debug\Seringe.Tests.pdb
