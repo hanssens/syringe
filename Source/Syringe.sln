@@ -1,21 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syringe", "Seringe\Syringe.csproj", "{E4428FC1-EE99-46DD-94EC-059AC8BDCF54}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syringe.Tests", "Seringe.Tests\Syringe.Tests.csproj", "{9554CDC8-6D89-4A6C-A5A7-202DDE3CAA22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syringe", "Syringe\Syringe.csproj", "{E4428FC1-EE99-46DD-94EC-059AC8BDCF54}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{27D59CB9-600F-41B2-92BE-E853F6BE35FE}"
-	ProjectSection(SolutionItems) = preProject
-		Local.testsettings = Local.testsettings
-		Syringe.vsmdi = Syringe.vsmdi
-		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-	EndProjectSection
 EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = Syringe.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -35,16 +25,14 @@ Global
 		{E4428FC1-EE99-46DD-94EC-059AC8BDCF54}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E4428FC1-EE99-46DD-94EC-059AC8BDCF54}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E4428FC1-EE99-46DD-94EC-059AC8BDCF54}.Release|x86.ActiveCfg = Release|Any CPU
-		{9554CDC8-6D89-4A6C-A5A7-202DDE3CAA22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9554CDC8-6D89-4A6C-A5A7-202DDE3CAA22}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9554CDC8-6D89-4A6C-A5A7-202DDE3CAA22}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{9554CDC8-6D89-4A6C-A5A7-202DDE3CAA22}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{9554CDC8-6D89-4A6C-A5A7-202DDE3CAA22}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9554CDC8-6D89-4A6C-A5A7-202DDE3CAA22}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9554CDC8-6D89-4A6C-A5A7-202DDE3CAA22}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9554CDC8-6D89-4A6C-A5A7-202DDE3CAA22}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{9554CDC8-6D89-4A6C-A5A7-202DDE3CAA22}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{9554CDC8-6D89-4A6C-A5A7-202DDE3CAA22}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Syringe\Syringe.csproj
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Syringe.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
