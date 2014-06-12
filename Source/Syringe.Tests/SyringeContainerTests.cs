@@ -5,6 +5,7 @@ using System.Linq;
 using System.ComponentModel;
 using System.Runtime.Serialization;
 using NUnit.Framework;
+using FluentAssertions;
 
 namespace Syringe.Tests
 {
@@ -14,21 +15,31 @@ namespace Syringe.Tests
 		[Test]
         public void AnonymousRegistration()
         {
+			// arrange
             var c = new SyringeContainer();
             c.Register<IMathNode, Zero>();
-            IMathNode m = c.Resolve<IMathNode>();
-			Assert.IsInstanceOf(typeof(Zero), m);
-            Assert.AreEqual(0, m.Calculate());
+
+			// act
+			IMathNode target = c.Resolve<IMathNode>();
+
+			// assert
+			target.Should ().BeOfType (typeof(IMathNode));
+			target.Calculate ().Should ().Be (0);
         }
 
 		[Test]
         public void NamedRegistration()
         {
+			// arrange
             var c = new SyringeContainer();
             c.Register<IMathNode, Zero>("zero");
-            IMathNode m = c.Resolve<IMathNode>("zero");
-			Assert.IsInstanceOf(typeof(Zero), m);
-            Assert.AreEqual(0, m.Calculate());
+
+			// act
+			IMathNode target = c.Resolve<IMathNode>("zero");
+
+			// assert
+			target.Should ().BeOfType (typeof(Zero));
+			target.Calculate ().Should ().Be (0);
         }
 
 		[Test]

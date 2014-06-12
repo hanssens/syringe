@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
+using FluentAssertions;
 
 namespace Syringe.Tests
 {
@@ -12,7 +13,7 @@ namespace Syringe.Tests
         public static SyringeContainer staticContainer { get; set; }
 
 		[SetUp]
-        public static void MyClassInitialize(TestContext testContext) 
+        public static void MyClassInitialize() 
         { 
             // Initialize the Singleton
             staticContainer = new SyringeContainer();
@@ -29,9 +30,11 @@ namespace Syringe.Tests
         public void AnonymousSingletonRegistration()
         {
             //staticContainer.Register<IMathNode, Zero>();
-            var m = staticContainer.Resolve<IMathNode>();
-			Assert.IsInstanceOf (typeof(IMathNode), m);
-            Assert.AreEqual(0, m.Calculate());
+			var target = staticContainer.Resolve<IMathNode>();
+
+			// assert
+			target.Should ().BeOfType (typeof(IMathNode));
+			target.Calculate ().Should ().Be (0);
         }
     }
 }
