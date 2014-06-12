@@ -1,5 +1,0 @@
-C:\Users\Juliën Hanssens\Desktop\_MAANDAG\ConsoleApplication1\Seringe\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Juliën Hanssens\Desktop\_MAANDAG\ConsoleApplication1\Seringe\bin\Debug\Seringe.dll
-C:\Users\Juliën Hanssens\Desktop\_MAANDAG\ConsoleApplication1\Seringe\bin\Debug\Seringe.pdb
-C:\Users\Juliën Hanssens\Desktop\_MAANDAG\ConsoleApplication1\Seringe\obj\Debug\Seringe.dll
-C:\Users\Juliën Hanssens\Desktop\_MAANDAG\ConsoleApplication1\Seringe\obj\Debug\Seringe.pdb
