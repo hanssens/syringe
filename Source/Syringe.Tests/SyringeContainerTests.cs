@@ -13,32 +13,32 @@ namespace Syringe.Tests
     public class SyringeContainerTests
     {
 		[Test]
-        public void AnonymousRegistration()
+		public void SyringeContainer_Should_Resolve_AnonymousRegistration()
         {
 			// arrange
             var c = new SyringeContainer();
             c.Register<IMathNode, Zero>();
 
 			// act
-			IMathNode target = c.Resolve<IMathNode>();
+			var target = c.Resolve<IMathNode>();
 
 			// assert
-			target.Should ().BeOfType (typeof(IMathNode));
+			target.Should ().BeOfType <Zero> ();
 			target.Calculate ().Should ().Be (0);
         }
 
 		[Test]
-        public void NamedRegistration()
+		public void SyringeContainer_Should_Resolve_NamedRegistration()
         {
 			// arrange
             var c = new SyringeContainer();
             c.Register<IMathNode, Zero>("zero");
 
 			// act
-			IMathNode target = c.Resolve<IMathNode>("zero");
+			var target = c.Resolve<IMathNode>("zero");
 
 			// assert
-			target.Should ().BeOfType (typeof(Zero));
+			target.Should ().BeOfType <Zero> ();
 			target.Calculate ().Should ().Be (0);
         }
 
@@ -64,28 +64,36 @@ namespace Syringe.Tests
         }
 
 		[Test]
-        public void MultipleRegistration()
+		public void SyringeContainer_Should_Allow_MultipleRegistration_And_Fetch_First_ByDefault()
         {
-            // Register two instances - by default fetching the first
-            var c = new SyringeContainer();
+			// arrange
+			int expected = 0;
+			var c = new SyringeContainer();
+            
+			// act: register two instances - by default fetching the first
             c.Register<IMathNode, Zero>();
             c.Register<IMathNode, Number>();
+			var target = c.Resolve<IMathNode>().Calculate();
 
-            int target = c.Resolve<IMathNode>().Calculate();
-            Assert.AreEqual(0, target);
+			// assert:
+			Assert.AreEqual(expected, target);
         }
 
 		[Test]
-        public void MultipleRegistrationWithPreference()
+		public void SyringeContainer_Should_Allow_MultipleRegistration_WithPreference()
         {
-            // Register two instances - by default fetching the first
-            int expected = 5;
+			// arrange
+			int expected = 0;
             var c = new SyringeContainer();
+
+			// act: register two instances - by default expecting the first
             c.Register<IMathNode, Zero>();
             c.Register<IMathNode, Number>().WithValue("number", expected);
-            
-            int target = c.Resolve<IMathNode>().Calculate();
-            Assert.AreEqual(expected, target);
+			var target = c.Resolve<IMathNode>();
+
+			// assert
+			target.Should ().BeOfType <Zero> ();
+			target.Calculate ().Should ().Be (expected);
         }
 
 

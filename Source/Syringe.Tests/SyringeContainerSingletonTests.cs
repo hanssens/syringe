@@ -29,11 +29,10 @@ namespace Syringe.Tests
 		[Test]
         public void AnonymousSingletonRegistration()
         {
-            //staticContainer.Register<IMathNode, Zero>();
 			var target = staticContainer.Resolve<IMathNode>();
 
 			// assert
-			target.Should ().BeOfType (typeof(IMathNode));
+			target.Should ().BeOfType <Zero> ();
 			target.Calculate ().Should ().Be (0);
         }
     }
